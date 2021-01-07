@@ -3,9 +3,8 @@ const resourcesController = require("../../controllers/resourcesController");
 
 // "/api/resources"
 router.route("/")
-    .get((req, res) => {
-        res.send('This Works!');
-    })
+    .get(resourcesController.findAll)
+    .post(resourcesController.create);
 
 
 
