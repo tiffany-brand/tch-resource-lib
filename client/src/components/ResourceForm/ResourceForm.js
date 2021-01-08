@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { TextField, Button, Typography, Paper } from '@material-ui/core';
+import { TextField, Button, Typography, Container } from '@material-ui/core';
 import useStyles from './styles';
 
 import { useDispatch } from 'react-redux';
@@ -37,7 +37,7 @@ const ResourceForm = () => {
     }
 
     return (
-        <Paper className={classes.paper}>
+        <Container className={classes.container}>
             <form autoComplete="off" noValidate className={`${classes.form} ${classes.root}`} onSubmit={handleSubmit}>
                 <Typography variant="h6">Add a New Resource</Typography>
                 <TextField
@@ -67,7 +67,7 @@ const ResourceForm = () => {
                 <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
             </form>
 
-        </Paper>
+        </Container>
     )
 }
 

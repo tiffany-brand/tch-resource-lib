@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container, CircularProgress } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import Resource from '../Resource/Resource';
 
@@ -6,11 +7,20 @@ const ResourceList = () => {
     const resources = useSelector((state) => state.resources)
     console.log(resources);
     return (
-        <div>
-            <h1>Resource List</h1>
-            <Resource />
-            <Resource />
-        </div>
+
+        !resources.length ? <CircularProgress /> : (
+            <Container>
+                {
+                    resources.map((resource) => (
+
+                        <Resource key={resource._id} resource={resource} />
+
+                    ))
+                }
+            </Container>
+        )
+
+
     )
 }
 

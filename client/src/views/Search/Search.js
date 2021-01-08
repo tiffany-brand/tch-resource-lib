@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import ResourceList from '../../components/ResourceList/ResourceList';
+import { Container, Typography } from '@material-ui/core';
 
 import { getResources } from '../../actions/resources';
 import { useDispatch } from 'react-redux';
@@ -13,10 +14,10 @@ const Search = () => {
     }, [dispatch]);
 
     return (
-        <div>
-            <h1>SEARCH VIEW</h1>
+        <Container>
+            <Typography gutterBottom variant="h6">Search for Resources</Typography>
             <ResourceList />
-        </div>
+        </Container>
     )
 }
 
