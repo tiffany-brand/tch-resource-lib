@@ -4,6 +4,8 @@ export default (resources = [], action) => {
     switch (action.type) {
         case GET_ALL:
             return action.payload;
+        case CREATE:
+            return [...resources, action.payload]
         default:
             return resources;
     }

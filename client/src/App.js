@@ -28,7 +28,6 @@ const App = () => {
               <Add />
             </Route>
           </Switch>
-          <h1>App</h1>
         </ThemeProvider>
       </div>
     </BrowserRouter>

@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import useStyles from './styles';
 
+import { useDispatch } from 'react-redux';
+import { createResource } from '../../actions/resources';
+
 const ResourceForm = () => {
     const [resourceData, setResourceData] = useState({
         title: '',
@@ -13,13 +16,24 @@ const ResourceForm = () => {
         files: ''
     })
     const classes = useStyles();
+    const dispatch = useDispatch();
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(createResource(resourceData))
+        clear();
     }
 
     const clear = () => {
-
+        setResourceData({
+            title: '',
+            description: '',
+            author: '',
+            tags: '',
+            image: '',
+            links: '',
+            files: ''
+        })
     }
 
     return (

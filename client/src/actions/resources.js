@@ -10,3 +10,12 @@ export const getResources = () => async (dispatch) => {
         console.log(error)
     }
 }
+
+export const createResource = (resource) => async (dispatch) => {
+    try {
+        const { data } = await api.createResource(resource);
+        dispatch({ type: CREATE, payload: data });
+    } catch (error) {
+        console.log(error)
+    }
+}
