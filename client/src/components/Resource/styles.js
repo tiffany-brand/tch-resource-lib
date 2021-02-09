@@ -10,5 +10,8 @@ export default makeStyles((theme) => ({
     },
     buttons: {
         margin: "10px"
+    },
+    images: {
+        width: "200px"
     }
 }));

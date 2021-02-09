@@ -6,7 +6,7 @@ const Resource = (props) => {
 
     const classes = useStyles();
 
-    const { _id, title, author, description } = props.resource
+    const { _id, title, author, description, image } = props.resource
 
     return (
         <Container className={classes.root} >
@@ -19,9 +19,9 @@ const Resource = (props) => {
                         {author && author.join(", ")}
                     </Typography>
                 </Grid>
-                {/* <Grid item xs={12} sm={3}>
-                    <img src={image} alt={title} />
-                </Grid> */}
+                <Grid item xs={12} sm={3}>
+                    <img className={classes.images} src={image} alt={title} />
+                </Grid>
                 <Grid item xs={12} sm={9}>
                     <Typography variant="body2" color="textSecondary" component="p" paragraph>
                         {description}
