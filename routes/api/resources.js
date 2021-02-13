@@ -6,7 +6,8 @@ router.route("/")
     .get(resourcesController.findAll)
     .post(resourcesController.create);
 
-
+router.route("/search")
+    .get(resourcesController.search)
 
 // "/api/resources/:id"
 

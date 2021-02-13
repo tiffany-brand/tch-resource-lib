@@ -12,6 +12,20 @@ const resourceSchema = new Schema({
     links: [String]
 });
 
+resourceSchema.index({
+    title: 'text',
+    author: 'text',
+    description: 'text',
+    tags: 'text'
+}, {
+    weight: {
+        title: 5,
+        tags: 4,
+        author: 3,
+        description: 1
+    },
+});
+
 const Resource = mongoose.model("Resource", resourceSchema);
 
 module.exports = Resource;
