@@ -12,6 +12,6 @@ export default makeStyles((theme) => ({
         margin: "10px"
     },
     images: {
-        width: "200px"
+        width: "90%"
     }
 }));
