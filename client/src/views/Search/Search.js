@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import ResourceList from '../../components/ResourceList/ResourceList';
 import { Container, Typography } from '@material-ui/core';
 
-import { getResources } from '../../actions/resources';
+import { getResources, searchResources } from '../../actions/resources';
 import { useDispatch } from 'react-redux';
 
 const Search = () => {
@@ -10,7 +10,9 @@ const Search = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getResources())
+        // dispatch(getResources())
+        // search test:
+        dispatch(searchResources('zoom'));
     }, [dispatch]);
 
     return (
