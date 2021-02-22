@@ -12,11 +12,11 @@ const Search = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        // dispatch(getResources())
-        // search test:
-        dispatch(searchResources('zoom'));
-    }, [dispatch]);
+    // useEffect(() => {
+    //     // dispatch(getResources())
+    //     // search test:
+    //     dispatch(searchResources('zoom'));
+    // }, [dispatch]);
 
     return (
         <Container className={classes.root}>

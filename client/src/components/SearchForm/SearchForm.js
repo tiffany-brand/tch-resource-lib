@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 import { TextField, Grid, Button, Typography, Container } from '@material-ui/core';
 import useStyles from './styles';
 
+import { getResources, searchResources } from '../../actions/resources';
+import { useDispatch } from 'react-redux';
+
 const SearchForm = () => {
 
     const classes = useStyles();
+    const dispatch = useDispatch();
 
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -16,6 +20,7 @@ const SearchForm = () => {
     const handleSubmit = event => {
         event.preventDefault();
         console.log(searchTerm.split(" ").join("+").trim())
+        dispatch(searchResources(searchTerm.split(" ").join("+").trim()))
     };
 
     return (
