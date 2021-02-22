@@ -1,5 +1,7 @@
 # Teaching Resources Library
 
+[![License: MIT](https://img.shields.io/github/license/tiffany-brand/tch-resource-lib?style=plastic)](./LICENSE)
+
 ## Table of Contents
 
 * [Description](#description)
